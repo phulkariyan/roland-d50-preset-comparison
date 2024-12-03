@@ -34,3 +34,19 @@ use std::collections::HashMap;
     }
 }
 
+fn main() {
+    use d50_preset_comparison::{D50Preset, compare_presets};
+
+    let mut preset1 = D50Preset::new("Digital Native Dance");
+    preset1.add_parameter("cutoff", 64.0);
+    preset1.add_parameter("resonance", 32.0);
+    preset1.add_parameter("attack", 20.0);
+
+    let mut preset2 = D50Preset::new("Fantasia");
+    preset2.add_parameter("cutoff", 96.0);
+    preset2.add_parameter("resonance", 48.0);
+    preset2.add_parameter("attack", 40.0);
+
+    let similarity = compare_presets(&preset1, &preset2);
+    println!("Similarity between presets: {:.2}", similarity);
+}
