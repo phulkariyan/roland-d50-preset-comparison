@@ -13,6 +13,7 @@ use std::collections::HashMap;
                 parameters: HashMap::new(),
             }
         }
+        
         pub fn add_parameter(&mut self, key: &str, value: f32) {
             self.parameters.insert(key.to_string(), value);
         }
