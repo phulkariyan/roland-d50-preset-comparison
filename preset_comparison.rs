@@ -6,9 +6,6 @@ use std::collections::HashMap;
         parameters: HashMap<String, f32>,
     }
 
-    
-
-    
     impl D50Preset {
         pub fn new(name: &str) -> Self {
             D50Preset {
