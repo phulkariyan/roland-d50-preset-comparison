@@ -6,7 +6,7 @@ use std::collections::HashMap;
         parameters: HashMap<String, f32>,
     }
 
-    
+
     
 
     impl D50Preset {
